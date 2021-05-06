@@ -41,6 +41,19 @@ class AirportFlights extends Seeder
         $flight->price = 200.50;
         $airport->flights()->save($flight);
 
+        $airport = new Airport();
+        $airport->name = "Aeroporto di Firenze-Peretola";
+        $airport->code = "LIRQ";
+        $airport->lat = "48,2159";
+        $airport->long = "12,840";
+        $airport->save();
+
+        $flight = new Flight();
+        $flight->code_departure = "TT698";
+        $flight->code_arrival = "BH145";
+        $flight->stopover = "false";
+        $flight->price = 250.90;
+        $airport->flights()->save($flight);
 
 
 

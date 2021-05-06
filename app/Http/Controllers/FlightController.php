@@ -14,14 +14,12 @@ class FlightController extends Controller
 
         $data = $request->all();
 
-
-
             if($data['code'] !== null && $data['code_2'] !== null ){
                 $cheaperFlight = DB::table('airports')
                 ->Join('flights','flights.airport_id','=','airports.id')
                 ->where('airports.code',$data['code'])
                 ->orWhere('airports.code',$data['code_2'])
-                ->select('code','stopover','flights.price', 'flights.code_departure', 'flights.code_arrival')
+                ->select('name','code','stopover','flights.price', 'flights.code_departure', 'flights.code_arrival')
                 ->orderBy('price','ASC')
                 ->get();
 

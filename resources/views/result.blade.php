@@ -3,32 +3,54 @@
 
 
         @section('content')
-        @foreach ($cheaperFlight as $key => $flight )
+            @foreach ($cheaperFlight as $key => $flight )
 
-            @if($key === 0)
-                <b>Volo più economico,</b>
-                <span>Codice aereoporto: {{$flight->code}}</span><br>
-                <span>Prezzo: {{$flight->price}}</span><br>
-                <span>Codice partenza: {{$flight->code_departure}}</span><br>
-                <span>Codice arrivo:  {{$flight->code_arrival}}</span><br>
-                <br>
-                <br>
-            @elseif ($flight->stopover === 'true')
+                @php
+                    $stopve = 'Con scalo';
+                    $noStopover = 'Diretto';
+                    $fermata = '';
 
-                <span>Codice aereoporto: {{$flight->code}}</span><br>
-                <span>Prezzo: {{$flight->price}}</span><br>
-                <b>Volo con scalo,</b>
-                <br>
-                <br>
+                    if($flight->stopover === 'true'){
+                        $fermata = $stopve;
+                    }else{
+                        $fermata = $noStopover;
+                    }
+                @endphp
 
-            @else
-                <span>Codice aereoporto: {{$flight->code}}</span><br>
-                <span>Prezzo: {{$flight->price}}</span><br>
-                <span>Codice partenza: {{$flight->code_departure}}</span><br>
-                <span>Codice arrivo:  {{$flight->code_arrival}}</span><br>
-                <br>
-                <br>
-            @endif
-        @endforeach
+                @if($key === 0)
+                    <b>VOLO PIU ECONOMICO</b><br>
+                    <b>Scalo:</b> <span>{{$fermata}}</span><br>
+                    <span><b>Nome aereoporto:</b> {{$flight->name}}</span><br>
+                    <span><b>Codice aereoporto:</b> {{$flight->code}}</span><br>
+                    <span><b>Prezzo:</b> € {{$flight->price}}</span><br>
+                    <span><b>Codice partenza:</b> {{$flight->code_departure}}</span><br>
+                    <span><b>Codice arrivo:</b>  {{$flight->code_arrival}}</span><br>
+                    <br>
+                   <hr>
+                   <br>
+
+
+
+                @else
+                    <b>Scalo:</b> <span>{{$fermata}}</span><br>
+                    <span><b>Nome aereoporto:</b> {{$flight->name}}</span><br>
+                    <span><b>Codice aereoporto:</b> {{$flight->code}}</span><br>
+                    <span><b>Prezzo: €</b> {{$flight->price}}</span><br>
+                    <span><b>Codice partenza:</b> {{$flight->code_departure}}</span><br>
+                    <span><b>Codice arrivo:</b>  {{$flight->code_arrival}}</span><br>
+                    <br>
+                    <br>
+                @endif
+
+
+
+
+
+
+
+
+
+            @endforeach
+
 
         @endsection
