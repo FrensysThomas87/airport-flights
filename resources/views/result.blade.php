@@ -1,6 +1,8 @@
 
         @extends('base')
 
+        @section('title', 'Result')
+
 
         @section('content')
             @foreach ($cheaperFlight as $key => $flight )
@@ -8,7 +10,7 @@
             {{-- Qui creo la variabile che riconosce se un volo ha lo scalo oppure no --}}
                 @php
                     $stopover = 'Con scalo';
-                    $noStopover = 'Diretto';
+                    $noStopover = 'Volo diretto';
                     $fermata = '';
 
                     if($flight->stopover === 'true'){
@@ -19,8 +21,10 @@
                 @endphp
 
                 {{-- Il volo visulizzato per primo sarà il più economico --}}
-                @if($key === 0)
-                    <b>VOLO PIU ECONOMICO</b><br>
+
+                <div class="result-container">
+                    @if($key === 0)
+                    <h3>VOLO PIU ECONOMICO</h3><br>
                     <b>Scalo:</b> <span>{{$fermata}}</span><br>
                     <span><b>Nome aereoporto:</b> {{$flight->name}}</span><br>
                     <span><b>Codice aereoporto:</b> {{$flight->code}}</span><br>
@@ -28,7 +32,7 @@
                     <span><b>Codice partenza:</b> {{$flight->code_departure}}</span><br>
                     <span><b>Codice arrivo:</b>  {{$flight->code_arrival}}</span><br>
                     <br>
-                   <hr>
+
                    <br>
 
 
@@ -37,12 +41,14 @@
                     <b>Scalo:</b> <span>{{$fermata}}</span><br>
                     <span><b>Nome aereoporto:</b> {{$flight->name}}</span><br>
                     <span><b>Codice aereoporto:</b> {{$flight->code}}</span><br>
-                    <span><b>Prezzo: €</b> {{$flight->price}}</span><br>
+                    <span><b>Prezzo:</b> € {{$flight->price}}</span><br>
                     <span><b>Codice partenza:</b> {{$flight->code_departure}}</span><br>
                     <span><b>Codice arrivo:</b>  {{$flight->code_arrival}}</span><br>
                     <br>
                     <br>
                 @endif
+                </div>
+
 
 
 

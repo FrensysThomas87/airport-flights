@@ -1,1 +1,129 @@
 //
+@import 'colors';
+
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    background-image: url('img/sky.jpg');
+}
+
+
+header{
+    height: 80px;
+    border-bottom: 15px solid $blue;
+    margin-bottom: 50px;
+
+    nav{
+        ul{
+            display: flex;
+            justify-content: center;
+
+
+            li{
+                margin-right: 20px;
+                list-style: none;
+                color: white;
+                line-height: 80px;
+            }
+        }
+    }
+}
+
+main{
+    height:calc(100vh - 160px);
+    position: relative;
+
+   i{
+        position: absolute;
+        font-size: 50px;
+        top: 50px;
+        color: $blue;
+
+        &:first-of-type{
+            left: 42%;
+        }
+
+        &:last-of-type{
+            left: 53%;
+        }
+
+    }
+
+
+
+    input{
+
+        margin-top: 150px;
+        height: 39px;
+        border:none;
+        text-align: center;
+
+        &::placeholder{
+            color: $blue;
+        }
+
+
+        &:first-of-type,
+        &:nth-last-of-type(2){
+            margin-right: 30px;
+            padding: 10px;
+        }
+
+        &:last-of-type{
+            background-color: $blue;
+            color: white;
+            padding: 5px;
+            margin-left: 20px;
+            width: 50px;
+            position: absolute;
+            top: 17%;
+            left: 41%;
+            width: 300px;
+            height: 70px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+
+    }
+
+    .result-container{
+        background-color: $blue;
+        color: white;
+        position: absolute;
+        height: 400px;
+        width: 400px;
+        padding: 30px;
+        text-align: left;
+        line-height: 30px;
+
+        &:first-of-type{
+            left:29%;
+
+        }
+
+        &:last-of-type{
+            left: 53%;
+        }
+
+        b{
+            color: $lightBlue;
+        }
+    }
+
+
+}
+
+
+
+footer{
+    height: 80px;
+    border-top: 15px solid $blue;
+}
