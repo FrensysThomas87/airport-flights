@@ -5,18 +5,20 @@
         @section('content')
             @foreach ($cheaperFlight as $key => $flight )
 
+            {{-- Qui creo la variabile che riconosce se un volo ha lo scalo oppure no --}}
                 @php
-                    $stopve = 'Con scalo';
+                    $stopover = 'Con scalo';
                     $noStopover = 'Diretto';
                     $fermata = '';
 
                     if($flight->stopover === 'true'){
-                        $fermata = $stopve;
+                        $fermata = $stopover;
                     }else{
                         $fermata = $noStopover;
                     }
                 @endphp
 
+                {{-- Il volo visulizzato per primo sarà il più economico --}}
                 @if($key === 0)
                     <b>VOLO PIU ECONOMICO</b><br>
                     <b>Scalo:</b> <span>{{$fermata}}</span><br>

@@ -1,6 +1,7 @@
 
         @extends('base')
 
+        {{-- Da questa pagina invio i dati al Flight-controller --}}
         @section('content')
         <form action="{{route('flights')}}">
             <label for="">Airport 1</label>
