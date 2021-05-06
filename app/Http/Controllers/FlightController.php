@@ -28,7 +28,7 @@ class FlightController extends Controller
 
                 //Se entrmabi i dati sono sbagliati
                 if(count($cheaperFlight) <= 0){
-                    return "Dati errati";
+                    return "Dati non presenti";
 
                 //Se uno dei due dati è sbagliato
                 }elseif(count($cheaperFlight) <= 1){

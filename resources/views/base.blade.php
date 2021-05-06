@@ -9,13 +9,14 @@
 </head>
 <body>
     <header>
-
+        <h1>VOLA VERSO NUOVE AVVENTURE</h1>
     </header>
+
     <main>
         @yield('content')
     </main>
 
 
-    <footer></footer>
+    <footer><h3>&copy Copyright 2021</h3></footer>
 </body>
 </html>

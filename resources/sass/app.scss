@@ -17,8 +17,12 @@ body{
 
 header{
     height: 80px;
-    border-bottom: 15px solid $blue;
+    background-color:  rgba($color: $lightBlue, $alpha: 0.8);
     margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $blue;
 
     nav{
         ul{
@@ -36,8 +40,9 @@ header{
     }
 }
 
+
 main{
-    height:calc(100vh - 160px);
+    height:calc(100vh - 210px);
     position: relative;
 
    i{
@@ -47,11 +52,11 @@ main{
         color: $blue;
 
         &:first-of-type{
-            left: 42%;
+            left: 39%;
         }
 
         &:last-of-type{
-            left: 53%;
+            left: 57%;
         }
 
     }
@@ -64,10 +69,13 @@ main{
         height: 39px;
         border:none;
         text-align: center;
+        font-size: 25px;
 
         &::placeholder{
             color: $blue;
         }
+
+
 
 
         &:first-of-type,
@@ -100,17 +108,19 @@ main{
         position: absolute;
         height: 400px;
         width: 400px;
-        padding: 30px;
+
         text-align: left;
         line-height: 30px;
 
         &:first-of-type{
             left:29%;
+            padding: 30px;
 
         }
 
         &:last-of-type{
             left: 53%;
+            padding: 83px 30px;
         }
 
         b{
@@ -124,6 +134,10 @@ main{
 
 
 footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:$blue;
     height: 80px;
-    border-top: 15px solid $blue;
+    background-color:  rgba($color: $lightBlue, $alpha: 0.8);
 }

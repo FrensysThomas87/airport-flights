@@ -16,8 +16,12 @@ body {
 
 header {
   height: 80px;
-  border-bottom: 15px solid #3a5f8f;
+  background-color: rgba(186, 199, 212, 0.8);
   margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3a5f8f;
 }
 header nav ul {
   display: flex;
@@ -31,7 +35,7 @@ header nav ul li {
 }
 
 main {
-  height: calc(100vh - 160px);
+  height: calc(100vh - 210px);
   position: relative;
 }
 main i {
@@ -41,16 +45,17 @@ main i {
   color: #3a5f8f;
 }
 main i:first-of-type {
-  left: 42%;
+  left: 39%;
 }
 main i:last-of-type {
-  left: 53%;
+  left: 57%;
 }
 main input {
   margin-top: 150px;
   height: 39px;
   border: none;
   text-align: center;
+  font-size: 25px;
 }
 main input::-moz-placeholder {
   color: #3a5f8f;
@@ -85,21 +90,26 @@ main .result-container {
   position: absolute;
   height: 400px;
   width: 400px;
-  padding: 30px;
   text-align: left;
   line-height: 30px;
 }
 main .result-container:first-of-type {
   left: 29%;
+  padding: 30px;
 }
 main .result-container:last-of-type {
   left: 53%;
+  padding: 83px 30px;
 }
 main .result-container b {
   color: #bac7d4;
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3a5f8f;
   height: 80px;
-  border-top: 15px solid #3a5f8f;
+  background-color: rgba(186, 199, 212, 0.8);
 }
