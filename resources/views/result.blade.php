@@ -24,41 +24,23 @@
 
                 <div class="result-container">
                     @if($key === 0)
-                    <h3>VOLO PIU ECONOMICO</h3><br>
-                    <b>Scalo:</b> <span>{{$fermata}}</span><br>
-                    <span><b>Nome aereoporto:</b> {{$flight->name}}</span><br>
-                    <span><b>Codice aereoporto:</b> {{$flight->code}}</span><br>
-                    <span><b>Prezzo:</b> € {{$flight->price}}</span><br>
-                    <span><b>Codice partenza:</b> {{$flight->code_departure}}</span><br>
-                    <span><b>Codice arrivo:</b>  {{$flight->code_arrival}}</span><br>
-                    <br>
+                        <h3>VOLO PIU ECONOMICO</h3>
+                        <b>Scalo:</b> <span>{{$fermata}}</span>
+                        <p><b>Nome aereoporto:</b> {{$flight->name}}</p>
+                        <p><b>Codice aereoporto:</b> {{$flight->code}}</p>
+                        <p><b>Prezzo:</b> € {{$flight->price}}</p>
+                        <p><b>Codice partenza:</b> {{$flight->code_departure}}</p>
+                        <p><b>Codice arrivo:</b>  {{$flight->code_arrival}}</p>
 
-                   <br>
-
-
-
-                @else
-                    <b>Scalo:</b> <span>{{$fermata}}</span><br>
-                    <span><b>Nome aereoporto:</b> {{$flight->name}}</span><br>
-                    <span><b>Codice aereoporto:</b> {{$flight->code}}</span><br>
-                    <span><b>Prezzo:</b> € {{$flight->price}}</span><br>
-                    <span><b>Codice partenza:</b> {{$flight->code_departure}}</span><br>
-                    <span><b>Codice arrivo:</b>  {{$flight->code_arrival}}</span><br>
-                    <br>
-                    <br>
-                @endif
+                    @else
+                        <b>Scalo:</b> <span>{{$fermata}}</span>
+                        <p><b>Nome aereoporto:</b> {{$flight->name}}</p>
+                        <p><b>Codice aereoporto:</b> {{$flight->code}}</p>
+                        <p><b>Prezzo:</b> € {{$flight->price}}</p>
+                        <p><b>Codice partenza:</b> {{$flight->code_departure}}</p>
+                        <p><b>Codice arrivo:</b>  {{$flight->code_arrival}}</p>
+                    @endif
                 </div>
 
-
-
-
-
-
-
-
-
-
-            @endforeach
-
-
-        @endsection
+                @endforeach
+            @endsection

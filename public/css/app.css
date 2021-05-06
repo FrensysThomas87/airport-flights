@@ -99,7 +99,7 @@ main .result-container:first-of-type {
 }
 main .result-container:last-of-type {
   left: 53%;
-  padding: 83px 30px;
+  padding: 58px 30px;
 }
 main .result-container b {
   color: #bac7d4;

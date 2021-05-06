@@ -61,8 +61,6 @@ main{
 
     }
 
-
-
     input{
 
         margin-top: 150px;
@@ -74,9 +72,6 @@ main{
         &::placeholder{
             color: $blue;
         }
-
-
-
 
         &:first-of-type,
         &:nth-last-of-type(2){
@@ -98,8 +93,6 @@ main{
             font-size: 40px;
             cursor: pointer;
         }
-
-
     }
 
     .result-container{
@@ -120,18 +113,14 @@ main{
 
         &:last-of-type{
             left: 53%;
-            padding: 83px 30px;
+            padding: 58px 30px;
         }
 
         b{
             color: $lightBlue;
         }
     }
-
-
 }
-
-
 
 footer{
     display: flex;
